@@ -68,6 +68,71 @@
   }
 }
 
+#table {
+  width: 900px;
+  height: 30px;
+  background: indianred;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  translate: -50%;
+  display: flex ;
+  gap: 10px;
+  justify-content: center;
+}
+
+.weight {
+  width: 50px;
+  height: 70px;
+  background: #555;
+  color: white;
+  align-content: center;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  position: relative;
+  bottom: 70px;
+  border-radius: 10px 10px 5px 5px;
+  transform-origin: bottom;
+  font-weight: bold;
+
+  &::before, &::after {
+    content: "";
+    background: inherit;
+    position: absolute;
+  }
+
+  &::before {
+    width: 30px;
+    height: 15px;
+    left: 10px;
+    top: -10px;
+  }
+
+  &::after {
+    width: 50px;
+    height: 10px;
+    left: 0;
+    top: -15px;
+    border-radius: 5px;
+  }
+
+  &.five {
+    scale: 85%;
+  }
+
+  &.three {
+    scale: 75%;
+  }
+
+  &.two {
+    scale: 65%;
+  }
+
+  &.one {
+    scale: 55%;
+  }
+}
+
 @keyframes sway {
   from {
     rotate: -20deg;
