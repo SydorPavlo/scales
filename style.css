@@ -16,14 +16,14 @@
     top: 100%;
     translate: -50% -50%;
     border-radius: 10px 10px 0 0;
-    animation: sway 3s ease-in-out infinite alternate;
+    /* animation: sway 3s ease-in-out infinite alternate; */
 
     .chain {
       width: 10px;
       height: 160px;
       position: absolute;
       top: 100%;
-      animation: sway 3s ease-in-out -3s infinite alternate;
+      /* animation: sway 3s ease-in-out -3s infinite alternate; */
       transform-origin: top;
 
       &::before,
@@ -52,7 +52,7 @@
         right: -5px;
       }
 
-      >div {
+      .plate {
         width: 200px;
         height: 40px;
         background: gold;
@@ -63,6 +63,20 @@
         top: 100%;
         left: 50%;
         transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+
+        &::before {
+          content: '';
+          position: absolute;
+          inset: -100px -20px -20px;
+          display: block;
+          background: #ff01;
+        }
+
+        .weight {
+          margin-inline: -30px;
+        }
       }
     }
   }
@@ -94,6 +108,7 @@
   border-radius: 10px 10px 5px 5px;
   transform-origin: bottom;
   font-weight: bold;
+  user-select: none;
 
   &::before, &::after {
     content: "";
