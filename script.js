@@ -32,11 +32,8 @@ window.onmousedown = e => {
   }
 
   window.onmouseup = e => {
-    window.onmousemove = null
-    window.onmouseup = null
-
     const plate = e.target.closest('.plate')
-
+    
     if (plate) {
       plate.append(weight)
       updateScales()
@@ -49,6 +46,8 @@ window.onmousedown = e => {
       oldWeight.replaceWith(weight)
     }
     weight.removeAttribute('style')
+    window.onmousemove = null
+    window.onmouseup = null
   }
 }
 

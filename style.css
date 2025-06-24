@@ -32,16 +32,13 @@
       .chain {
         rotate: 30deg;
       }
-    }
-
-    /* animation: sway 3s ease-in-out infinite alternate; */
+    } 
 
     .chain {
       width: 10px;
       height: 160px;
       position: absolute;
       top: 100%;
-      /* animation: sway 3s ease-in-out -3s infinite alternate; */
       transform-origin: top;
       transition: 1s;
 
@@ -63,7 +60,7 @@
         transform: skewX(30deg);
       }
 
-      &:has(.left) {
+        &:has(.left) {
         left: -5px;
       }
 
@@ -73,7 +70,7 @@
 
       .plate {
         width: 200px;
-        height: 40px;
+        height: 20px;
         background: gold;
         border-bottom-right-radius: 50% 100%;
         border-bottom-left-radius: 50% 100%;
@@ -129,6 +126,7 @@
   transform-origin: bottom;
   font-weight: bold;
   user-select: none;
+  font-size: 20px;
 
   &::before,
   &::after {
@@ -166,15 +164,5 @@
 
   &.one {
     scale: 55%;
-  }
-}
-
-@keyframes sway {
-  from {
-    rotate: -30deg;
-  }
-
-  to {
-    rotate: 30deg;
   }
 }
